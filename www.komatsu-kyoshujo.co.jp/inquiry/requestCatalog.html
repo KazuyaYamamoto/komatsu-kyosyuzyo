@@ -1,0 +1,766 @@
+
+
+<!DOCTYPE html >
+<html  lang="ja">
+
+<!-- Mirrored from www.komatsu-kyoshujo.co.jp/inquiry/requestCatalog.aspx by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 27 Dec 2018 17:49:08 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0" /><meta name="keywords" content="資料請求,資格,免許,建設,機械,移動式,溶接,取得,クレーン,講習,玉掛け,高所,コマツ" /><meta name="description" content="コマツ教習所の資料請求ページです。" /><meta name="author" content="Komatsu Safety Training Center Ltd." /><link rel="icon" href="../favicon.ico" /><title>
+	資料請求｜コマツ教習所
+</title><!-- リセットCSS読み込み -->
+<link href="../common/css/html5reset-1.6.1.css" rel="stylesheet">
+<!-- Bootstrap -->
+<link href="../common/css/bootstrap.css" rel="stylesheet">
+<!-- 共通化レイアウト用スタイルシート -->
+<link href="../common/css/style.css" rel="stylesheet">
+<!--グローバルメニュー-->
+<link rel="stylesheet" href="../common/css/bootsnav.css" />
+<!--カルーセル-->
+<link rel="stylesheet" href="../common/css/slick.css" />
+<link rel="stylesheet" href="../common/css/slick-theme.css" />
+<!--モーダルウインドウ-->
+<link rel="stylesheet" href="../common/css/magnific-popup.css" />
+<!-- その他css -->
+<link href="../common/css/sticky-state.css" rel="stylesheet">
+<link href="../common/css/animate.css" rel="stylesheet">
+<link href="../common/css/font-awesome.min.css" rel="stylesheet">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-8162970-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-8162970-1');
+</script>
+<link type="text/css" rel="stylesheet" href="https://www.komatsu-kyoshujo.co.jp/common/css/inquiry.css" media="screen" /><link href="../common/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" /><link rel="shortcut icon" href="../favicon.ico" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+    <script language="JavaScript1.2" type="text/javascript" src="../common/js/functions.js"></script>
+    <script src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8" type="text/javascript"></script>
+    <script type="text/javascript">
+
+
+
+
+        function changeEnabledTable(enabledPrivate) {
+
+
+            var tablePrivate = document.getElementById("TablePrivate");
+            var tableCompany = document.getElementById("TableCompany");
+
+            var sendButton1 = document.getElementById("SendButton1");
+            var sendButton2 = document.getElementById("SendButton2");
+
+            var tablePrivateValidator = document.getElementById("TablePrivateValidator");
+            var tableCompanyValidator = document.getElementById("TableCompanyValidator");
+
+            //var dropDownList1RangeValidator = document.getElementById("DropDownList1RangeValidator");
+            //var dropDownList2RangeValidator = document.getElementById("DropDownList2RangeValidator");
+
+            //var requiredFieldValidatorTextBoxContents1 = document.getElementById("RequiredFieldValidatorTextBoxContents1");
+            //var requiredFieldValidatorTextBoxContents2 = document.getElementById("RequiredFieldValidatorTextBoxContents2");
+
+            var customValidatorNeed = document.getElementById("CustomValidatorNeed");
+            var customValidatorNotNeed = document.getElementById("CustomValidatorNotNeed");
+
+            
+
+            if (enabledPrivate == true) {
+                tablePrivate.hidden = false;
+                tableCompany.hidden = true;
+                tableCompany.hidden = true;
+                sendButton1.hidden = false;
+                sendButton2.hidden = true;
+                tablePrivateValidator.hidden = false;
+                tableCompanyValidator.hidden = true;
+                //dropDownList1RangeValidator.hidden = false;
+                //dropDownList2RangeValidator.hidden = true;
+                //requiredFieldValidatorTextBoxContents1.hidden = false;
+                //requiredFieldValidatorTextBoxContents2.hidden = true;
+                customValidatorNeed.hidden = false;
+                customValidatorNotNeed.hidden = true;
+            }
+            else {
+
+                tablePrivate.hidden = true;
+                tableCompany.hidden = false;
+                sendButton1.hidden = true;
+                sendButton2.hidden = false;
+                tablePrivateValidator.hidden = true;
+                tableCompanyValidator.hidden = false;
+                //dropDownList1RangeValidator.hidden = true;
+                //dropDownList2RangeValidator.hidden = false;
+                //requiredFieldValidatorTextBoxContents1.hidden = true;
+                //requiredFieldValidatorTextBoxContents2.hidden = false;
+                customValidatorNeed.hidden = false;
+                customValidatorNotNeed.hidden = true;
+
+            }
+        }
+
+        function getZipCode(isPrivate) {
+            var _address;
+            if (isPrivate) {
+                _address = document.getElementById("TextBoxAddress");
+            }
+            else {
+                _address = document.getElementById("TextBoxAddress_Company");
+            }
+
+            if (_address.value == "") {
+                return;
+            }
+            $.ajax({
+                url: "https://zipcoda.net/api",
+                dataType: "jsonp",
+                data: {
+                    address: _address.value
+                }
+            })
+                .then(function (data) {
+                    if (data.length == 0) {
+                        return;
+                    }
+                    var zipCode = data.items[0].zipcode;
+                    var target;
+                    if (isPrivate) {
+                        target = document.getElementById("TextBoxPostalCode");
+                    }
+                    else {
+                        target = document.getElementById("TextBoxPostalCode_Company");
+                    }
+                    target.value = zipCode;
+                });
+        }
+
+        function ValidateSubjects(source, arguments) {
+            //#debugger
+            targetRootControl = document.getElementById('body');
+            if (targetRootControl == null) {
+                arguments.IsValid = false;
+                return;
+            }
+            // get all the control of the type INPUT in the base control.
+            var Inputs = targetRootControl.getElementsByTagName("input");
+            var checkedCount = 0;
+            for (var n = 0; n < Inputs.length; ++n) {
+                if ((Inputs[n].type == 'checkbox' && Inputs[n].checked)) {
+                    ++checkedCount;
+                }
+            }
+            if (checkedCount < 1) {
+                arguments.IsValid = false;
+                return;
+            }
+
+            arguments.IsValid = true;
+            return;
+        }
+
+        var array = new Array();
+
+        function buttonClick() {
+            // get all the control of the type INPUT in the base control.
+            array = new Array();
+            var Inputs = document.getElementsByTagName("input");
+            var checkedCount = 0;
+            for (var n = 0; n < Inputs.length; ++n) {
+                if ((Inputs[n].type == 'checkbox' && Inputs[n].checked)) {
+                    ++checkedCount;
+                    array.push(Inputs[n].id);
+                }
+            }
+        }
+
+        function customValidatorSubject_ClientValidate(source, args) {
+            if (array.length > 0) {
+                args.IsValid = true;
+            }
+            else {
+                args.IsValid = false;
+            }
+
+        }
+
+        function CustomValidatorNeed_ClientValidate(source, args) {
+ 
+
+            if (document.getElementById("RadioButtonNeedSchedule").checked || document.getElementById("RadioButtonNotNeed").checked) {
+                args.IsValid = true;
+            }
+            else {
+
+                args.IsValid = false;
+                var a = document.getElementById("RadioButtonNeedSchedule")
+                a.focus();
+            }
+        }
+    </script>
+</head>
+<body>
+<!-- ヘッダー・グローバルメニュー-->
+<header>
+	<nav class="navbar navbar-default navbar-fixed dark no-background bootsnav">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="https://home.komatsu/jp/"><img src="../common/img/logo.png" class="logo" alt="KOMATSU"></a>
+                <div id="centerName">
+                  <span>コマツ教習所</span>
+                </div>
+            </div>
+            
+            <div class="collapse navbar-collapse" id="navbar-menu">
+                <ul class="siteUtility clearfix">
+                    <li><a href="../company/outline.html">会社概要</a></li>
+                    <li><a href="requestCatalog.html">資料請求</a></li>
+                    <li><a href="inquiry.html">お問合せ</a></li>
+                </ul>      
+            
+                <div class="attr-nav">
+                    <ul>
+                        <!--<li>
+                            <a href="#"><img src="/common/img/header_icon_login_white.png" alt="ログインアイコン" class="sp_none tab_none" /><img src="/common/img/header_icon_login_blue.png" alt="ログインアイコン" class="pc_none" /><span>ログイン</span></a>
+                        </li>-->
+                    </ul>
+                </div>
+                
+                <ul class="nav navbar-nav navbar-right" data-in="fadeIn" data-out="fadeOut">
+                    <li><a href="../index.html">トップ</a></li>
+                    <li><a href="../KkjReservation/Subjects/SubjectList.html">講習種別・予約</a></li>
+                    <li><a href="../company/center_list.html">センタ一覧</a></li>
+                    <li><a href="../faq/FaqTop.html">よくあるお問合せ</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" >サポート情報</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../info/replacement.html">再交付・書替について</a></li>
+                            <li><a href="../info/conveniprint.html">コンビニプリントについて</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" >助成金・給付金について</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="../info/construction_education_grant_change.html">助成金制度一部改正のお知らせ</a></li>
+                                    <li><a href="../info/construction_education_grant.html">人材開発支援助成金</a></li>
+                                    <li><a href="../info/education_training_payment.html">教育訓練給付制度</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>                    
+                </ul>
+            </div>
+        </div>
+	</nav>
+</header>
+
+
+<form method="post" action="https://www.komatsu-kyoshujo.co.jp/inquiry/requestCatalog.aspx" id="ctl01">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['ctl01'];
+if (!theForm) {
+    theForm = document.ctl01;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="https://www.komatsu-kyoshujo.co.jp/WebResource.axd?d=BDqSVrEWTYyfSOdQrn0j9vzmpHtpHLwfy9nTm21_VihkGfFOPUuEWn5akrHFswlpm0cyL5T5PxUq8X5LKrElO_4et6N7I9wTB2xb1neOtHs1&amp;t=636765787264470882" type="text/javascript"></script>
+
+
+<script src="https://www.komatsu-kyoshujo.co.jp/ScriptResource.axd?d=u5HlWzU1K-YX5i_pvPacol-hnXS624S4xTvV_yTZG13x6b_qqubw2JJ4SVE-gjiuiuWnUznQ0JMqwyxKYLOd7Bj8Ykhhp_ep0czImBzGzXh5gYJ7c0ll5gWkS1OZZAmtQVm6tWdez7HTLvepeFecHg2&amp;t=34a51159" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax クライアント側フレームワークを読み込めませんでした。');
+//]]>
+</script>
+
+<script src="https://www.komatsu-kyoshujo.co.jp/ScriptResource.axd?d=_EG_0JiV3d4JEANSIdMO0FyR41WvfI7cnr0U3Fb3-_Yi2qbmecZHNyIPI_td9gJ-XQynNZT4pe778nu5kdTy5xSUgbHWF5Y5l2qu-fFgF0jms6C1mFlk8C3R0bGbIbLhVRh_QpahjKHz0YzzaFkr9A2&amp;t=34a51159" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+var PageMethods = function() {
+PageMethods.initializeBase(this);
+this._timeout = 0;
+this._userContext = null;
+this._succeeded = null;
+this._failed = null;
+}
+PageMethods.prototype = {
+_get_path:function() {
+ var p = this.get_path();
+ if (p) return p;
+ else return PageMethods._staticInstance.get_path();},
+SetCheckedSubjects:function(number,list,succeededCallback, failedCallback, userContext) {
+/// <param name="number" type="Number">System.Int32</param>
+/// <param name="list" type="Array">System.Collections.Generic.List`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+return this._invoke(this._get_path(), 'SetCheckedSubjects',false,{number:number,list:list},succeededCallback,failedCallback,userContext); }}
+PageMethods.registerClass('PageMethods',Sys.Net.WebServiceProxy);
+PageMethods._staticInstance = new PageMethods();
+PageMethods.set_path = function(value) {
+PageMethods._staticInstance.set_path(value); }
+PageMethods.get_path = function() { 
+/// <value type="String" mayBeNull="true">The service url.</value>
+return PageMethods._staticInstance.get_path();}
+PageMethods.set_timeout = function(value) {
+PageMethods._staticInstance.set_timeout(value); }
+PageMethods.get_timeout = function() { 
+/// <value type="Number">The service timeout.</value>
+return PageMethods._staticInstance.get_timeout(); }
+PageMethods.set_defaultUserContext = function(value) { 
+PageMethods._staticInstance.set_defaultUserContext(value); }
+PageMethods.get_defaultUserContext = function() { 
+/// <value mayBeNull="true">The service default user context.</value>
+return PageMethods._staticInstance.get_defaultUserContext(); }
+PageMethods.set_defaultSucceededCallback = function(value) { 
+ PageMethods._staticInstance.set_defaultSucceededCallback(value); }
+PageMethods.get_defaultSucceededCallback = function() { 
+/// <value type="Function" mayBeNull="true">The service default succeeded callback.</value>
+return PageMethods._staticInstance.get_defaultSucceededCallback(); }
+PageMethods.set_defaultFailedCallback = function(value) { 
+PageMethods._staticInstance.set_defaultFailedCallback(value); }
+PageMethods.get_defaultFailedCallback = function() { 
+/// <value type="Function" mayBeNull="true">The service default failed callback.</value>
+return PageMethods._staticInstance.get_defaultFailedCallback(); }
+PageMethods.set_enableJsonp = function(value) { PageMethods._staticInstance.set_enableJsonp(value); }
+PageMethods.get_enableJsonp = function() { 
+/// <value type="Boolean">Specifies whether the service supports JSONP for cross domain calling.</value>
+return PageMethods._staticInstance.get_enableJsonp(); }
+PageMethods.set_jsonpCallbackParameter = function(value) { PageMethods._staticInstance.set_jsonpCallbackParameter(value); }
+PageMethods.get_jsonpCallbackParameter = function() { 
+/// <value type="String">Specifies the parameter name that contains the callback function name for a JSONP request.</value>
+return PageMethods._staticInstance.get_jsonpCallbackParameter(); }
+PageMethods.set_path("requestCatalog.aspx");
+PageMethods.SetCheckedSubjects= function(number,list,onSuccess,onFailed,userContext) {
+/// <param name="number" type="Number">System.Int32</param>
+/// <param name="list" type="Array">System.Collections.Generic.List`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+PageMethods._staticInstance.SetCheckedSubjects(number,list,onSuccess,onFailed,userContext); }
+//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdABOvVXD1oYELeveMr0vHCmYPjqRq2nnTQV98J8OF34a/bL3cVYxlwnaU4fm/ajlo5oso7FodkMDcbF1Fj5CEwL6+1hf20ZIysH1rXiegRSQKd+rMwi6BgEZkJdP2Vtxzp1sxpv7ZPN3RfYxFCwCfk1Xg6EhqCB8CBYKkMy2bGETrEtcfLzP7THxOSy70dW0Wj/uOLUL5oDX4K1raET98Q9AUKgcl61bNKpj2e8i3UhHOCv1kiQchWFLitd5muaFFYMYd0N+s7xK8KyrtwiXn0l7xTU+UAk8mkvHkrXoAqF03A227JYXtGKrXk/X3iuFk0wZ+mdEpTIFIDf6mc0X4AzpcwPadz9nz0gckGQzbHjghzeWuj7hBf37pywlwOkL5GSLpebo2k1rUam/EVNjw50GsqQ0o8V8ntkY/ed6GvWQoXUlUBkS+H85f5VSn8k0N1U4=" />
+</div>
+<div id="wrapper">
+
+            <div id="breadcrumbNavArea">
+                <div class="container">
+                    <div id="breadcrumbNav">
+                        <ol class="clearfix">
+                            <li>
+                                <a href="../index.html"><span>コマツ教習所トップ</span></a>
+                            </li>
+                            <li>資料請求</li>
+                        </ol>
+                        <!-- /#breadcrumbNav -->
+                    </div>
+                </div>
+            </div>
+
+            <div id="inquiry">
+                <div class="container">
+                    <h1 class="headline01">資料請求</h1>
+                    <p class="paragraph">
+                        各種講習の資料を郵送で差し上げています。お手元に印刷物でご希望のお客様は、こちらのフォームに入力しご請求ください。<br>
+                        （郵送の為、お手元に届くまでには数日かかります。）<br>
+                        お急ぎの方は、講習日程と申込書は、「講習日程」に掲載されていますので、そちらをご利用ください。<br>
+                        ※ブラウザのウィンドウを複数開いて同時に2つ以上の資料請求を進めてしまうと誤作動を起こす可能性がありますので、 必ず1つの画面でお進め下さい。<br>
+                        ＊4～5日過ぎても返信がない場合は、お手数でも電話でご連絡をお願いします</p>
+
+                    <div class="sectionBox">
+                        <h2 class="headline02">1.講習希望センタを選択</h2>
+                        <div class="inquiryContentsBox">
+                            <span>
+                                <select name="DropDownListCenter" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;DropDownListCenter\&#39;,\&#39;\&#39;)&#39;, 0)" id="DropDownListCenter" tabindex="10" class="requestSelectForm">
+	<option selected="selected" value="0">選択してください</option>
+	<option value="1">北海道センタ</option>
+	<option value="16">宮城センタ</option>
+	<option value="2">栃木センタ</option>
+	<option value="3">群馬センタ</option>
+	<option value="4">埼玉センタ</option>
+	<option value="5">東京センタ</option>
+	<option value="6">神奈川センタ</option>
+	<option value="7">静岡センタ</option>
+	<option value="8">粟津センタ</option>
+	<option value="9">愛知センタ</option>
+	<option value="10">京都センタ</option>
+	<option value="11">近畿センタ</option>
+	<option value="12">奈良センタ</option>
+	<option value="14">四国センタ</option>
+	<option value="17">四国センタ高知支所</option>
+	<option value="15">九州センタ</option>
+
+</select>
+                            </span>
+                        </div>
+                    </div>
+                    
+                                     
+
+
+                    
+                    
+                </div>
+            </div>
+    <!-- ページトップ -->
+    <p id="pageTop"><a href="#wrapper"><i class="fa fa-chevron-up"></i><br>トップへ<br>戻る</a></p>
+
+</div>
+    <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('sm1', 'ctl01', [], [], [], 90, '');
+//]]>
+</script>
+
+</form>
+
+<!-- フッタ -->
+<footer>
+  <div id="footerMenuArea">
+    <div class="container">
+      <div class="row">
+        <div class="wrap">
+            <div class="col-md-3 col-sm-3 hidden-xs">
+              <div class="listBox">
+                  <p>講習予約</p>
+                  <ul>
+                    <li><a href="../illust_search/index.html">イラストから探す</a></li>
+                    <li><a href="../KkjReservation/Subjects/SubjectList.html">講習名から探す</a></li>
+                  </ul>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-4 hidden-xs">
+              <div class="listBox">
+                  <p>センタ一覧</p>
+                  <ul class="centerList">
+                    <li><a href="../hokkaido/index.html">北海道センタ</a></li>
+                    <li><a href="../miyagi/index.html">宮城センタ</a></li>
+                    <li><a href="../tochigi/index.html">栃木センタ</a></li>
+                    <li><a href="../gunma/index.html">群馬センタ</a></li>
+                    <li><a href="../saitama/index.html">埼玉センタ</a></li>
+                    <li><a href="../tokyo/index.html">東京センタ</a></li>
+                    <li><a href="../kanagawa/index.html">神奈川センタ</a></li>
+                    <li><a href="../sizuoka/index.html">静岡センタ</a></li>
+                    <li><a href="../awadu/index.html">粟津センタ</a></li>
+                    <li><a href="../aichi/index.html">愛知センタ</a></li>
+                    <li><a href="../kyoto/index.html">京都センタ</a></li>
+                    <li><a href="../kinki/index.html">近畿センタ</a></li>
+                    <li><a href="../nara/index.html">奈良センタ</a></li>
+                    <li><a href="../sikoku/index.html">四国センタ</a></li>
+                    <li><a href="../kouchi/index.html">高知支所</a></li>
+                    <li><a href="../kyushu/index.html">九州センタ</a></li>
+                  </ul>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-3 hidden-xs">
+              <div class="listBox">
+                  <p>サポート情報</p>
+                  <ul>
+                    <li><a href="../faq/FaqTop.html">よくあるお問合せ</a></li>
+                    <li><a href="../info/replacement.html">再交付・書替について</a></li>
+                    <li><a href="../info/conveniprint.html">コンビニプリントについて</a></li>
+                    <li>助成金・給付金について
+                        <ul class="normalList">
+                          <li><a href="../info/construction_education_grant_change.html">助成金制度一部改正のお知らせ</a></li>
+                          <li><a href="../info/construction_education_grant.html">人材開発支援助成金</a></li>
+                          <li><a href="../info/education_training_payment.html">教育訓練給付制度</a></li>
+                        </ul>
+                    </li>
+                  </ul>
+              </div>
+            </div>
+            <div class="col-md-2 col-sm-2 hidden-xs">
+              <div class="listBox">
+                  <p>&nbsp;</p>
+                  <ul>
+                    <li><a href="../company/outline.html">会社概要</a></li>
+                    <!--<li><a href="#">ログイン</a></li>
+                    <li><a href="#">新規会員登録</a></li>-->
+                    <li><a href="requestCatalog.html">資料請求</a></li>
+                    <li><a href="inquiry.html">お問合せ</a></li>
+                  </ul>
+              </div>
+            </div>
+            </div>
+      </div>
+    </div>
+    <div class="footerLink">
+      <ul>
+        <li><a href="../cautions/cautions_on_use.html">ご利用上の注意</a></li>
+        <li><a href="../cautions/privacy.html">個人情報保護への取り組み</a></li>
+        <li><a href="../cautions/mynumber.html">特定個人情報等の適正な取扱いに関する基本方針</a></li>
+      </ul>
+    </div>
+  </div>
+  <div id="footerCopyArea">
+    <p>Copyright © Komatsu Safety Training Center Ltd. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- jQuery ( Bootstrap の JavaScript プラグインに必要です ) --> 
+<script src="../common/js/jquery-3.2.1.min.js"></script> 
+<!-- (下に)全てのコンパイル済みプラグインをインクルードするか、必要に応じて個別にファイルをインクルードします --> 
+<script src="../common/js/bootstrap.js"></script>
+<script src="../common/js/functions.js"></script>
+<script src="../common/js/bootsnav.js"></script>
+<script src="../common/js/slick.min.js"></script>
+<script src="../common/js/jquery.matchHeight.js"></script>
+<script src="../common/js/jquery.magnific-popup.min.js"></script>
+<script src="../common/js/sticky-state.min.js"></script>
+<script>
+$(function() {
+    $('.single-item').slick({
+          infinite: true,
+		  lazyLoad: 'progressive',
+          dots:true,
+          slidesToShow: 1,
+          /*centerMode: true, //要素を中央寄せ
+          centerPadding:'100px', //両サイドの見えている部分のサイズ*/
+          autoplay:true, //自動再生
+          autoplaySpeed:5000,
+          responsive: [{
+               breakpoint: 1600,
+                    settings: {
+                         centerMode: false,
+               }
+		  },{
+			   breakpoint: 480,
+                    settings: {
+                         centerMode: false,
+						 dots:false
+               }
+          }]
+     });
+});
+$(function(){
+$('.aboutPhotoList').slick({
+autoplay:true,
+autoplaySpeed:5000,
+dots:true,
+pauseOnHover:true,
+slidesToShow:4,
+slidesToScroll:1,
+arrows: false,
+responsive: [{
+      breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        }
+      }
+    ]
+});
+});
+</script>
+<script>
+$(function(){
+  var state = false;
+  var scrollpos;
+ 
+  $('.navbar-toggle').on('click', function(){
+    if(state == false) {
+      scrollpos = $(window).scrollTop();
+      $('body').addClass('fixed').css({'top': -scrollpos});
+      $('.navbar').addClass('open');
+      state = true;
+    } else {
+      $('body').removeClass('fixed').css({'top': 0});
+      window.scrollTo( 0 , scrollpos );
+      $('.navbar').removeClass('open');
+      state = false;
+    }
+  });
+ 
+});
+</script>
+<script>
+$(function(){
+        var slider = $('.aboutPhotoList02').slick({
+		autoplay:true,
+		autoplaySpeed:5000,
+		dots:false,
+		fade: true,
+		pauseOnHover:true,
+		arrows: true,
+		});
+    });
+</script>
+<script type="text/javascript">
+$('.heightBox').matchHeight();
+$('.scheduleClassNameList li').matchHeight();
+$('#topBannerArea a').matchHeight();
+</script>
+<script type="text/javascript">
+$(function (){
+    $('.popup-youtube').magnificPopup({
+        type: 'iframe',
+        mainClass: 'mfp-fade',
+        removalDelay: 150,
+        preloader: false
+    });
+});
+$(function () {
+  $('.youtubePopup').magnificPopup({
+  type: 'inline',
+  showCloseBtn:true,
+  removalDelay: 500, //delay removal by X to allow out-animation
+  callbacks: {
+    beforeOpen: function() {
+       this.st.mainClass = this.st.el.attr('data-effect');
+    }
+  },
+  midClick: true
+  });
+});
+$(function(){
+      $('.aboutPhotoPopup').magnificPopup({
+      type: 'image'
+  });
+});
+$(function () {
+  $('.pricePopup').magnificPopup({
+  showCloseBtn:false,
+  removalDelay: 500, //delay removal by X to allow out-animation
+  callbacks: {
+    beforeOpen: function() {
+       this.st.mainClass = this.st.el.attr('data-effect');
+    }
+  },
+  fixedContentPos: false,
+  midClick: true
+  });
+  //閉じるリンクの設定
+  $(document).on('click', '.popup-modal-dismiss', function (e) { 
+    e.preventDefault();
+    $.magnificPopup.close();
+  });
+});
+$(function () {
+  $('.illustSearchPopup').magnificPopup({
+  showCloseBtn:false,
+  removalDelay: 500, //delay removal by X to allow out-animation
+  callbacks: {
+    beforeOpen: function() {
+       this.st.mainClass = this.st.el.attr('data-effect');
+    }
+  },
+  midClick: true
+  });
+  //閉じるリンクの設定
+  $(document).on('click', '.popup-modal-dismiss', function (e) { 
+    e.preventDefault();
+    $.magnificPopup.close();
+  });
+});
+
+//交通案内用(使用時にオープン)
+/*$(function () {
+	$('.aboutGuidePhoto01').magnificPopup({
+		delegate: 'a', // ポップアップを開く子要素
+		type: 'image',
+		callbacks: {
+			open: setInterval(function() {
+			$.magnificPopup.instance.next()
+			}, 5000)
+		},
+		
+	});
+});*/
+</script>
+<script>
+var headerHight = $("nav.navbar.bootsnav").outerHeight();
+$('a[href^="#anc"],area[href^="#anc"]').click(function() {
+    var href = $(this).attr("href");
+    var target = $(href == "#" || href == "" ? "body" : href);
+    var position = target.offset().top - headerHight;
+    $("html, body").animate({ scrollTop: position }, 500, "swing");
+    return false;
+});
+</script>
+<script type="text/javascript">
+//ページ内リンク調整
+$(window).on('load', function() {
+  var headerHeight = 125;
+  var url = $(location).attr('href');
+  if(url.indexOf("?id=") != -1){
+    var id = url.split("?id=");
+    var $target = $('#' + id[id.length - 1]);
+    if($target.length){
+      var pos = $target.offset().top-headerHeight;
+      $("html, body").animate({scrollTop:pos}, 400);
+    }
+  }else if(url.indexOf("?ac=") != -1){
+    var ac = url.split("?ac=");
+    var $target = $("a[name='" + ac[ac.length - 1] + "']");
+    if($target.length){
+      var pos = $target.offset().top-headerHeight;
+      $("html, body").animate({scrollTop:pos}, 400);
+    }
+  }
+  });
+</script>
+<script>
+//■page topボタン
+$(function(){
+var topBtn=$('#pageTop');
+topBtn.hide();
+ 
+//◇ボタンの表示設定
+$(window).scroll(function(){
+  if($(this).scrollTop()>80){
+    //---- 画面を80pxスクロールしたら、ボタンを表示する
+    topBtn.fadeIn();
+  }else{
+    //---- 画面が80pxより上なら、ボタンを表示しない
+    topBtn.fadeOut();
+  } 
+});
+ 
+// ◇ボタンをクリックしたら、スクロールして上に戻る
+topBtn.click(function(){
+  $('body,html').animate({
+  scrollTop: 0},500);
+  return false;
+});
+
+});
+</script>
+<script src="../common/js/imageMapResizer.min.js"></script> 
+<script>
+$(document).ready(function() {
+    $('map').imageMapResize();
+});
+</script>
+
+<script src="../common/js/wow.min.js"></script>
+<script type="text/javascript">
+if(!_ua.ltIE8){
+new WOW().init();
+}
+</script>
+
+
+</body>
+
+<!-- Mirrored from www.komatsu-kyoshujo.co.jp/inquiry/requestCatalog.aspx by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 27 Dec 2018 17:49:08 GMT -->
+</html>

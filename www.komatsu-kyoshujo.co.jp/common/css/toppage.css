@@ -1,0 +1,678 @@
+/* CSS Document */
+/*メインイメージ*/
+#topMainImage{
+	width:100%;
+}
+
+#topMainImage div.single-item p{
+	margin:0;
+}
+
+#topMainImage div.single-item p span{
+	display:none;
+}
+
+#topMainImage div.single-item p img {
+    width: 100%;
+    height: auto;
+}
+
+/*スライダー画像*/
+#topMainImage p.slider01{
+	background-image: url(../img/main_slider01.jpg);
+}
+
+#topMainImage p.slider02{
+	background-image: url(../img/main_slider01.jpg);
+}
+
+#topMainImage p.slider03{
+	background-image: url(../img/main_slider01.jpg);
+}
+
+#topMainImage p.slider04{
+	background-image: url(../img/main_slider01.jpg);
+}
+
+.slick-dotted.slick-slider{
+	margin:0;
+}
+
+/*左右の矢印の大きさを変える*/
+.slick-prev, .slick-next{
+	width:35px;
+	height:35px;
+}
+/*左右の矢印の色を変える*/
+.slick-prev:before,
+.slick-next:before {
+    color: #fff;
+	font-size:30px;
+}
+/*左右の矢印の位置を変える*/
+/*スマホ*/
+@media screen and (max-width:767px){
+.slick-next {
+    right: 5px;
+    z-index: 99;
+}
+.slick-prev {
+     left: 5px;
+    z-index: 100;
+}
+}
+/*タブレット*/
+@media screen and (min-width: 768px) and (max-width: 991px) {
+.slick-next {
+    right: 10px;
+    z-index: 99;
+}
+.slick-prev {
+     left: 10px;
+    z-index: 100;
+}
+}
+/*PC*/
+@media screen and (min-width:992px){
+.slick-next {
+    right: 20px;
+    z-index: 99;
+}
+.slick-prev {
+     left: 20px;
+    z-index: 100;
+}
+}
+/*スライド数のドットの色を変える*/
+.slick-dots li.slick-active button:before {
+    color: #0e1271;
+}
+
+.slick-dots li button:before {
+    color: #eaeaea;
+	opacity:1;
+}
+/*ドットのサイズを変える*/
+/*スマホ*/
+@media screen and (max-width:767px){
+.slick-dots li button:before{
+	font-size:15px;
+}
+
+/*ドットの位置を変える*/
+.slick-dots{
+	bottom:10px;
+}
+}
+/*タブレット*/
+@media screen and (min-width: 768px) and (max-width: 991px) {
+.slick-dots li button:before{
+	font-size:20px;
+}
+
+/*ドットの位置を変える*/
+.slick-dots{
+	bottom:20px;
+}
+}
+/*PC*/
+@media screen and (min-width:992px){
+.slick-dots li button:before{
+	font-size:30px;
+}
+
+/*ドットの位置を変える*/
+.slick-dots{
+	bottom:30px;
+}
+}
+.slick-dots li button:before{
+	content:"■";
+}
+
+
+
+
+/*トップページメインメニュー*/
+/*スマホ*/
+@media screen and (max-width:767px){
+#topMenuArea{
+	padding:24px 7.5px 9px;
+}
+
+#topMenuArea a.topMenuButton{
+}
+
+#topMenuArea a.topMenuButton:hover{
+	opacity:0.8;
+}
+
+#topMenuArea a.topMenuButton figure{
+	position:relative;
+	margin-right:7.5px;
+	margin-left:7.5px;
+	margin-bottom:15px;
+}
+
+#topMenuArea a.topMenuButton figure figcaption {
+	position:absolute;
+	bottom: 0px;
+	background-color:#48494a;
+	width:100%;
+	padding:5% 0;
+	text-align:center;
+	color:#fff;
+}
+
+#topMenuArea a.topMenuButton figure figcaption:before {
+	font-family: 'FontAwesome';
+	content:"\f054";
+	margin-right:5px;
+}
+}
+/*タブレット*/
+@media screen and (min-width: 768px) and (max-width: 991px) {
+#topMenuArea{
+	padding:24px 7.5px;
+}
+
+#topMenuArea a.topMenuButton{
+}
+
+#topMenuArea a.topMenuButton:hover{
+	opacity:0.8;
+}
+
+#topMenuArea a.topMenuButton figure{
+	position:relative;
+	margin-right:7.5px;
+	margin-left:7.5px;
+}
+
+#topMenuArea a.topMenuButton figure figcaption {
+	position:absolute;
+	bottom: 0px;
+	background-color:#48494a;
+	width:100%;
+	padding:5% 0;
+	text-align:center;
+	color:#fff;
+}
+
+#topMenuArea a.topMenuButton figure figcaption:before {
+	font-family: 'FontAwesome';
+	content:"\f054";
+	margin-right:5px;
+}
+}
+/*PC*/
+@media screen and (min-width:992px){
+#topMenuArea{
+	padding:24px 0;
+}
+
+#topMenuArea a.topMenuButton{
+}
+
+#topMenuArea a.topMenuButton:hover{
+	opacity:0.8;
+}
+
+#topMenuArea a.topMenuButton figure{
+	position:relative;
+	margin-right:12px;
+	margin-left:12px;
+}
+
+#topMenuArea a.topMenuButton figure figcaption {
+	position:absolute;
+	bottom: 0px;
+	background-color:#48494a;
+	width:100%;
+	padding:5% 0;
+	text-align:center;
+	color:#fff;
+}
+
+#topMenuArea a.topMenuButton figure figcaption:before {
+	font-family: 'FontAwesome';
+	content:"\f054";
+	margin-right:5px;
+}
+}
+
+/*最新情報・臨時講習情報*/
+/*スマホ*/
+@media screen and (max-width:767px){
+#informationArea{
+	padding:24px 0;
+	background:#ececec;
+}
+
+#informationArea .nav-tabs li{
+	width:50%;
+	text-align:center;
+	font-size:1.2em;
+	font-weight:bold;
+}
+
+#informationArea .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus{
+	background:#0E1271;
+	color:#ffffff !important;
+}
+
+#informationArea .nav-tabs > li > a{
+	background:#ffffff;
+	border-radius: 0 0 0 0;
+	border:none;
+	padding:10px 0;
+	color:#888888;
+}
+
+#informationArea .nav-tabs > li > a:hover{
+	color:#0E1271;
+}
+
+#informationArea .nav-tabs > li > a.topics:before{
+	font-family: 'FontAwesome';
+	content:"\f0a1";
+	margin-right:8px;
+}
+
+#informationArea .nav-tabs > li > a.course:before{
+	font-family: 'FontAwesome';
+	content:"\f040";
+	margin-right:8px;	
+}
+
+#informationArea .tab-content .tab-pane{
+	border-top:5px solid #0E1271;
+	background:#ffffff;
+	padding:0 10px 10px;
+}
+
+#informationArea .tab-content .tab-pane dl{
+	padding:10px 0;
+	border-bottom:1px dashed #bcbcbc;
+	width:100%;
+	margin:0;
+	position:relative;
+}
+
+#informationArea .tab-content .tab-pane dt{
+	margin-bottom:5px;
+}
+
+#informationArea .tab-content .tab-pane dt span{
+	background:#0E1271;
+	padding:5px 10px;
+	color:#ffffff;
+	margin-right:20px;
+	text-align:center;
+	display:inline-block;
+	width:70px;
+	font-size:0.8em;
+}
+
+#informationArea .tab-content .tab-pane dd{
+	display:table-cell;
+}
+
+#informationArea .tab-content .tab-pane dd a{
+	text-decoration:underline;
+}
+
+#informationArea .tab-content .tab-pane .courseBox dd span{
+	display:block;
+	margin-top:10px;
+	font-size:0.8em;
+	color:#666666;
+	position:absolute;
+	top:-1px;
+	padding-left:80px;
+}
+
+#informationArea .tab-content .tab-pane{
+	max-height:370px;
+	overflow-y:scroll;
+	-webkit-overflow-scrolling: touch;
+	overflow-scrolling: touch;
+}
+}
+/*タブレット*/
+@media screen and (min-width: 768px) and (max-width: 991px) {
+#informationArea{
+	padding:24px 0;
+	background:#ececec;
+}
+
+#informationArea .nav-tabs li{
+	width:50%;
+	text-align:center;
+	font-size:1.5em;
+	font-weight:bold;
+}
+
+#informationArea .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus{
+	background:#0E1271;
+	color:#ffffff !important;
+}
+
+#informationArea .nav-tabs > li > a{
+	background:#ffffff;
+	border-radius: 0 0 0 0;
+	border:none;
+	padding:20px 15px;
+	color:#888888;
+}
+
+#informationArea .nav-tabs > li > a:hover{
+	color:#0E1271;
+}
+
+#informationArea .nav-tabs > li > a.topics:before{
+	font-family: 'FontAwesome';
+	content:"\f0a1";
+	margin-right:8px;
+}
+
+#informationArea .nav-tabs > li > a.course:before{
+	font-family: 'FontAwesome';
+	content:"\f040";
+	margin-right:8px;	
+}
+
+#informationArea .tab-content .tab-pane{
+	border-top:5px solid #0E1271;
+	background:#ffffff;
+	padding:10px;
+}
+
+#informationArea .tab-content .tab-pane dl{
+	padding:10px 0px;
+	border-bottom:1px dashed #bcbcbc;
+	width:100%;
+	margin:0;
+}
+
+#informationArea .tab-content .tab-pane dt{
+	display:table-cell;
+}
+
+#informationArea .tab-content .tab-pane dt span{
+	background:#0E1271;
+	padding:3px 10px;
+	color:#ffffff;
+	margin-right:20px;
+	text-align:center;
+	display:inline-block;
+	width:120px;
+}
+
+#informationArea .tab-content .tab-pane dd{
+	display:table-cell;
+}
+
+#informationArea .tab-content .tab-pane dd a{
+	text-decoration:underline;
+}
+
+#informationArea .tab-content .tab-pane .courseBox dd span{
+	display:block;
+	margin-top:5px;
+	font-size:0.95em;
+	color:#666666;
+}
+
+#informationArea .tab-content .tab-pane .topicsBox{
+	max-height:335px;
+	overflow-y:scroll;
+	-webkit-overflow-scrolling: touch;
+	overflow-scrolling: touch;
+}
+
+#informationArea .tab-content .tab-pane .courseBox{
+	max-height:335px;
+	overflow-y:scroll;
+	-webkit-overflow-scrolling: touch;
+	overflow-scrolling: touch;
+}
+}
+/*PC*/
+@media screen and (min-width:992px){
+#informationArea{
+	padding:24px 0;
+	background:#ececec;
+}
+
+#informationArea .nav-tabs li{
+	width:50%;
+	text-align:center;
+	font-size:1.5em;
+	font-weight:bold;
+}
+
+#informationArea .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus{
+	background:#0E1271;
+	color:#ffffff !important;
+}
+
+#informationArea .nav-tabs > li > a{
+	background:#ffffff;
+	border-radius: 0 0 0 0;
+	border:none;
+	padding:20px 15px;
+	color:#888888;
+}
+
+#informationArea .nav-tabs > li > a:hover{
+	color:#0E1271;
+}
+
+#informationArea .nav-tabs > li > a.topics:before{
+	font-family: 'FontAwesome';
+	content:"\f0a1";
+	margin-right:8px;
+}
+
+#informationArea .nav-tabs > li > a.course:before{
+	font-family: 'FontAwesome';
+	content:"\f040";
+	margin-right:8px;	
+}
+
+#informationArea .tab-content .tab-pane{
+	border-top:5px solid #0E1271;
+	background:#ffffff;
+	padding:20px;
+}
+
+#informationArea .tab-content .tab-pane dl{
+	padding:20px 10px;
+	border-bottom:1px dashed #bcbcbc;
+	width:100%;
+	margin:0;
+}
+
+#informationArea .tab-content .tab-pane dt{
+	float:left;
+}
+
+#informationArea .tab-content .tab-pane dt span{
+	background:#0E1271;
+	padding:5px 10px;
+	color:#ffffff;
+	margin-right:20px;
+	text-align:center;
+	display:inline-block;
+	width:120px;
+}
+
+#informationArea .tab-content .tab-pane dd{
+	display:table-cell;
+	line-height:180%;
+}
+
+#informationArea .tab-content .tab-pane dd a{
+	text-decoration:underline;
+}
+
+#informationArea .tab-content .tab-pane .courseBox dd span{
+	font-size:0.95em;
+	color:#666666;
+	margin-left:20px;
+	display:inline-block;
+}
+
+#informationArea .tab-content .tab-pane .topicsBox{
+	max-height:360px;
+	overflow-y:scroll;
+}
+
+#informationArea .tab-content .tab-pane .courseBox{
+	max-height:360px;
+	overflow-y:scroll;
+}
+}
+
+/*トップページその他サブメニュー*/
+#topSubMenuArea{
+	padding:24px 0 0;
+	background:#ececec;
+}
+
+#topSubMenuArea a.topMenuButton:hover{
+	opacity:0.8;
+}
+
+#topSubMenuArea a.topMenuButton figure{
+	margin-right:12px;
+	margin-left:12px;
+	margin-bottom:30px;
+}
+
+#topSubMenuArea a.topMenuButton figure img{
+	margin-bottom:20px;
+}
+
+#topSubMenuArea a.topMenuButton figure figcaption {
+	text-align:center;
+	color:#0E1271;
+}
+
+/*バナーエリア*/
+/*スマホ*/
+@media screen and (max-width:767px){
+}
+/*タブレット*/
+@media screen and (min-width: 768px) and (max-width: 991px) {
+}
+/*PC*/
+@media screen and (min-width:992px){
+#bannerArea{
+	padding:24px 0;
+}
+}
+
+/*モーダルウィンドウ*/
+button{
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        padding: 0;
+        appearance: none;
+}
+
+div.youtubeModalBox .video{
+  position:relative;
+  width:100%;
+  padding-top:56.25%;
+}
+
+div.youtubeModalBox .video iframe{
+  position:absolute;
+  top:0;
+  right:0;
+  width:100%;
+  height:100%;
+}
+
+div.youtubeModalBox .btn01{
+	background:#ffb566;
+}
+
+div.youtubeModalBox .btn02{
+	background:#ff9966;
+}
+
+
+div.youtubeModalBox a.button:hover{
+	text-decoration:underline;
+}
+
+/*スマホ*/
+@media screen and (max-width:767px){
+.youtubePopupBox {
+  position: relative;
+  background: #ffffff;
+  width:auto;
+  margin: 0 auto;
+}
+
+div.youtubeModalBox a.button{
+	/*width:50%;
+	float:left;*/
+	padding:10px;
+	display:block;
+	text-align:center;
+	color:#ffffff;
+	font-size:1.1em;
+	font-weight:bold;
+}
+}
+/*タブレット*/
+@media screen and (min-width: 768px) and (max-width: 991px) {
+.youtubePopupBox {
+  position: relative;
+  background: #ffffff;
+  width:auto;
+  margin: 0 auto;
+}
+
+div.youtubeModalBox a.button{
+	/*width:50%;
+	float:left;*/
+	padding:20px;
+	display:block;
+	text-align:center;
+	color:#ffffff;
+	font-size:1.2em;
+	font-weight:bold;
+}
+}
+/*PC*/
+@media screen and (min-width:992px){
+.youtubePopupBox {
+  position: relative;
+  background: #ffffff;
+  width:auto;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+div.youtubeModalBox a.button{
+	/*width:50%;
+	float:left;*/
+	padding:20px;
+	display:block;
+	text-align:center;
+	color:#ffffff;
+	font-size:1.2em;
+	font-weight:bold;
+}
+}
+
+.mfp-close-btn-in .mfp-close{
+	color:#ffffff;
+}

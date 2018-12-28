@@ -1,0 +1,978 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+
+<!-- Mirrored from www.komatsu-kyoshujo.co.jp/inquiry/inquiry.aspx by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 27 Dec 2018 17:49:08 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0" /><meta name="keywords" content="お問合せ,資格,免許,建設,機械,移動式,溶接,取得,クレーン,講習,玉掛け,高所,コマツ" /><meta name="description" content="コマツ教習所のお問合せページです。" /><meta name="author" content="Komatsu Safety Training Center Ltd." /><link rel="icon" href="../favicon.ico" /><title>
+	お問合せ｜コマツ教習所
+</title><!-- リセットCSS読み込み -->
+<link href="../common/css/html5reset-1.6.1.css" rel="stylesheet">
+<!-- Bootstrap -->
+<link href="../common/css/bootstrap.css" rel="stylesheet">
+<!-- 共通化レイアウト用スタイルシート -->
+<link href="../common/css/style.css" rel="stylesheet">
+<!--グローバルメニュー-->
+<link rel="stylesheet" href="../common/css/bootsnav.css" />
+<!--カルーセル-->
+<link rel="stylesheet" href="../common/css/slick.css" />
+<link rel="stylesheet" href="../common/css/slick-theme.css" />
+<!--モーダルウインドウ-->
+<link rel="stylesheet" href="../common/css/magnific-popup.css" />
+<!-- その他css -->
+<link href="../common/css/sticky-state.css" rel="stylesheet">
+<link href="../common/css/animate.css" rel="stylesheet">
+<link href="../common/css/font-awesome.min.css" rel="stylesheet">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-8162970-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-8162970-1');
+</script>
+<link type="text/css" rel="stylesheet" href="https://www.komatsu-kyoshujo.co.jp/common/css/inquiry.css" media="screen" /><link href="../common/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" /><link rel="shortcut icon" href="../favicon.ico" />
+	<script language="JavaScript1.2" type="text/javascript" src="../common/js/functions.js"></script>
+
+    <script type="text/javascript">
+        function changeEnabledTable(enabledPrivate) {
+            var tablePrivate = document.getElementById("TablePrivate");
+            var tableCompany = document.getElementById("TableCompany");
+
+            var sendButton1 = document.getElementById("SendButton1");
+            var sendButton2 = document.getElementById("SendButton2");
+
+            var tablePrivateValidator = document.getElementById("TablePrivateValidator");
+            var tableCompanyValidator = document.getElementById("TableCompanyValidator");
+
+            var dropDownList1RangeValidator = document.getElementById("DropDownList1RangeValidator");
+            var dropDownList2RangeValidator = document.getElementById("DropDownList2RangeValidator");
+
+            var requiredFieldValidatorTextBoxContents1 = document.getElementById("RequiredFieldValidatorTextBoxContents1");
+            var requiredFieldValidatorTextBoxContents2 = document.getElementById("RequiredFieldValidatorTextBoxContents2");
+
+            if (enabledPrivate == true) {
+                tablePrivate.hidden = false;
+                tableCompany.hidden = true;
+                sendButton1.hidden = false;
+                sendButton2.hidden = true;
+                tablePrivateValidator.hidden = false;
+                tableCompanyValidator.hidden = true;
+                dropDownList1RangeValidator.hidden = false;
+                dropDownList2RangeValidator.hidden = true;
+                requiredFieldValidatorTextBoxContents1.hidden = false;
+                requiredFieldValidatorTextBoxContents2.hidden = true;
+            }
+            else {
+                tablePrivate.hidden = true;
+                tableCompany.hidden = false;
+                sendButton1.hidden = true;
+                sendButton2.hidden = false;
+                tablePrivateValidator.hidden = true;
+                tableCompanyValidator.hidden = false;
+                dropDownList1RangeValidator.hidden = true;
+                dropDownList2RangeValidator.hidden = false;
+                requiredFieldValidatorTextBoxContents1.hidden = true;
+                requiredFieldValidatorTextBoxContents2.hidden = false;
+            }
+        }
+        function ButtonSend_Click() {
+            var kojin = document.getElementById("kojin");
+            var hojin = document.getElementById("hojin");
+            var tablePrivateValidator = document.getElementById("TablePrivateValidator");
+            var tableCompanyValidator = document.getElementById("TableCompanyValidator");
+
+            if (kojin.checked == true)
+            {
+                tablePrivateValidator.hidden = false;
+            }
+            else
+            {
+                tableCompanyValidator.hidden = false;
+            }
+        }
+
+        function ValidateEitherRequiredName(source, arguments) {
+            //alert("ValidateGenericPhoneNumber");
+
+            //var keyNumber = key + 1;
+            var targetID = source.controltovalidate;
+            arguments.IsValid = true;
+            var valueSelect = $("input[name*=InquiryType]:checked");
+            var valueName = document.getElementById("TextBoxName").value;
+            var valueName_Company = document.getElementById("TextBoxName_Company").value;
+
+
+
+            //var isMatchedMobilePhone1 = GetIsMatchFirstMobilePhoneNumberRegularExpression(valueMobilePhone1);
+            //var isMatchedMobilePhone2 = GetIsMatchPhoneNumberRegularExpressionRegexFrom3To4(valueMobilePhone2);
+            //var isMatchedMobilePhone3 = GetIsMatchPhoneNumberRegularExpressionRegexFrom4To4(valueMobilePhone3);
+            //var isMatchedPhone1 = GetIsMatchPhoneNumberRegularExpressionRegexFrom2To4(valuePhone1);
+            //var isMatchedPhone2 = GetIsMatchPhoneNumberRegularExpressionRegexFrom2To4(valuePhone2);
+            //var isMatchedPhone3 = GetIsMatchPhoneNumberRegularExpressionRegexFrom3To4(valuePhone3);
+            //if (
+            //    ((isMatchedPhone1 == true && isMatchedPhone2 == true && isMatchedPhone3 == true) == false) &&
+            //    ((valuePhone1 == false && valuePhone2 == false && valuePhone3 == false) == false)
+            //) {
+            //    source.errormessage = "TELを正しく入力してください。";
+            //    arguments.IsValid = false;
+            //    return;
+            //}
+        }
+
+
+    //window.onload = function onLoad() {
+    //    setTextbox(true);
+    //}
+  </script>
+
+</head>
+<body>
+<!-- ヘッダー・グローバルメニュー-->
+<header>
+	<nav class="navbar navbar-default navbar-fixed dark no-background bootsnav">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="https://home.komatsu/jp/"><img src="../common/img/logo.png" class="logo" alt="KOMATSU"></a>
+                <div id="centerName">
+                  <span>コマツ教習所</span>
+                </div>
+            </div>
+            
+            <div class="collapse navbar-collapse" id="navbar-menu">
+                <ul class="siteUtility clearfix">
+                    <li><a href="../company/outline.html">会社概要</a></li>
+                    <li><a href="requestCatalog.html">資料請求</a></li>
+                    <li><a href="inquiry.html">お問合せ</a></li>
+                </ul>      
+            
+                <div class="attr-nav">
+                    <ul>
+                        <!--<li>
+                            <a href="#"><img src="/common/img/header_icon_login_white.png" alt="ログインアイコン" class="sp_none tab_none" /><img src="/common/img/header_icon_login_blue.png" alt="ログインアイコン" class="pc_none" /><span>ログイン</span></a>
+                        </li>-->
+                    </ul>
+                </div>
+                
+                <ul class="nav navbar-nav navbar-right" data-in="fadeIn" data-out="fadeOut">
+                    <li><a href="../index.html">トップ</a></li>
+                    <li><a href="../KkjReservation/Subjects/SubjectList.html">講習種別・予約</a></li>
+                    <li><a href="../company/center_list.html">センタ一覧</a></li>
+                    <li><a href="../faq/FaqTop.html">よくあるお問合せ</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" >サポート情報</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../info/replacement.html">再交付・書替について</a></li>
+                            <li><a href="../info/conveniprint.html">コンビニプリントについて</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" >助成金・給付金について</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="../info/construction_education_grant_change.html">助成金制度一部改正のお知らせ</a></li>
+                                    <li><a href="../info/construction_education_grant.html">人材開発支援助成金</a></li>
+                                    <li><a href="../info/education_training_payment.html">教育訓練給付制度</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>                    
+                </ul>
+            </div>
+        </div>
+	</nav>
+</header>
+
+
+<form method="post" action="https://www.komatsu-kyoshujo.co.jp/inquiry/inquiry.aspx" onsubmit="javascript:return WebForm_OnSubmit();" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="https://www.komatsu-kyoshujo.co.jp/WebResource.axd?d=BDqSVrEWTYyfSOdQrn0j9vzmpHtpHLwfy9nTm21_VihkGfFOPUuEWn5akrHFswlpm0cyL5T5PxUq8X5LKrElO_4et6N7I9wTB2xb1neOtHs1&amp;t=636765787264470882" type="text/javascript"></script>
+
+
+<script src="https://www.komatsu-kyoshujo.co.jp/WebResource.axd?d=YbCljUwqQhMx-oC8Bqlyp_FPLhfTNN4ibhO0YV6zDO171rmVpxF0IYYMIxdoHl1I_vuOgbhLl3EF0MaaUtZYiKFosBf08cS7m-ttkHU0IyU1&amp;t=636765787264470882" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdACGvVXD1oYELeveMr0vHCmYPMR/g/EfiV3zblAwp3C33ahmtBxlOj32emIDi73X8eF4DVEK/jUFcpXIVNyfGcyCRn5sHKOmEpllmzQrGaL9TC3w4Y+rFIN8kNcoIJzlyIkQMAJ9MM3RSfT22W8vFcqF08Zn4oJWqyncXQmoeYCV+kybdFOMdNXHCq4MR7O04W23OT2hdWmstn+7lJsb5Dyliy45XnSN+76DEFfJ9Gt7TbAYTSo1PzsCqwGW000ePPssMjYCicbt2wpZ0DP9sjxbpFXudg5wq5hHx/dUroI41PzQDaG5YxPXKuxdT+AJHQuPNYl9UX4GwCAB9X+7l6bjuJSlLN9Uq2NMOSpEKYCLBOAgC+eqiy87RUeFhmWdq7N7DbrfqSmcZNV3alVakAU8OjfRkk0WLAjxqEDFQLmzBwx9A1kthWxQL6DfeEoXo4DqB6XeaF9qkbDJzpjC1cY5N547lI6SA/AIRIDozASY0oIP/3bctgevTaHeEKFcSmBOajYpy0CW798Rav0z0hrEVpgjinb5eODtiDb0ZeIOfVpqFtmFE/mhruoi1mVp4fg61r3IXbbge7zTEm3XmhCw0SQtq6Ciy0BydueI5zysYuvHwcaROO8HajuMZyjqGOTBJ7xOS6i8tGvEav8pfLoWKBfE0/gYbfEx5skLcV8BHQILTKFJKZOp3cDDRWz7RLufEsPekB2fIvSvBFiiccSJOSG1epImup4v3/cvDOjyFOQ==" />
+</div>
+<div id="wrapper">
+
+<div id="breadcrumbNavArea">
+    <div class="container">
+      <div id="breadcrumbNav">
+        <ol class="clearfix">
+            <li>
+                <a href="../index.html"><span>コマツ教習所トップ</span></a>
+            </li>
+            <li>お問合せ</li>
+        </ol>
+      <!-- /#breadcrumbNav --></div>
+    </div>
+</div>
+
+<div id="inquiry">
+    <div class="container">
+      <h1 class="headline01">お問合せ</h1>
+      <p class="paragraph">＊4～5日過ぎても返信がない場合は、お手数でも電話でご連絡をお願いします</p>
+
+      <div class="sectionBox">
+        <h2 class="headline02">お問合せ先センタを選択<i class="icon iconReq"></i></h2>
+          <div class="inquiryContentsBox"><span>
+              <select name="DropDownListCenterAndHeadOffice" id="DropDownListCenterAndHeadOffice" tabindex="10" class="requestSelectForm">
+	<option selected="selected" value="0">選択してください</option>
+	<option value="1">北海道センタ</option>
+	<option value="16">宮城センタ</option>
+	<option value="2">栃木センタ</option>
+	<option value="3">群馬センタ</option>
+	<option value="4">埼玉センタ</option>
+	<option value="5">東京センタ</option>
+	<option value="6">神奈川センタ</option>
+	<option value="7">静岡センタ</option>
+	<option value="8">粟津センタ</option>
+	<option value="9">愛知センタ</option>
+	<option value="10">京都センタ</option>
+	<option value="11">近畿センタ</option>
+	<option value="12">奈良センタ</option>
+	<option value="14">四国センタ</option>
+	<option value="17">四国センタ高知支所</option>
+	<option value="15">九州センタ</option>
+	<option value="99">本社</option>
+
+</select>
+          </span></div>
+              <span id="DropDownList1RangeValidator" style="color:Red;visibility:hidden;">お問合せ先センタを選択してください。</span>
+              <span id="DropDownList2RangeValidator" hidden="true" style="color:Red;visibility:hidden;">お問合せ先センタを選択してください。</span>
+      </div>
+      
+      <div class="sectionBox">
+        <h2 class="headline02">お客様の情報</h2>
+        <div class="radioBox ">
+            <div class="radio-inline">
+                <input id="kojin" type="radio" name="InquiryType" value="kojin" checked="checked" onclick="changeEnabledTable(true);" />
+                    <label for="kojin" class="radio">個人</label>
+                </div>
+            <div class="radio-inline">
+                <input id="hojin" type="radio" name="InquiryType" value="hojin" onclick="changeEnabledTable(false);" />
+                    <label for="hojin" class="radio">法人</label>
+                </div>
+        </div>
+        
+        <!--個人用テーブル-->
+        <table id="TablePrivate" class="inquiryTable">
+          <tbody>
+            <tr>
+              <th><span class="required">お名前</span></th>
+              <td><input name="TextBoxName" type="text" maxlength="50" id="TextBoxName" tabindex="20" onkeydown="if(event.keyCode==13){if( window.event.srcElement.type==&#39;submit&#39; || window.event.srcElement.type==&#39;text&#39; ){return false;}}" onkeypress="if(event.keyCode==13){if( window.event.srcElement.type==&#39;submit&#39; || window.event.srcElement.type==&#39;text&#39; ){return false;}}" /></td>
+
+            </tr>
+            <tr>
+              <th><span class="required">フリガナ</span></th>
+              <td><input name="TextBoxFurigana" type="text" maxlength="50" id="TextBoxFurigana" tabindex="21" onkeydown="if(event.keyCode==13){if( window.event.srcElement.type==&#39;submit&#39; || window.event.srcElement.type==&#39;text&#39; ){return false;}}" onkeypress="if(event.keyCode==13){if( window.event.srcElement.type==&#39;submit&#39; || window.event.srcElement.type==&#39;text&#39; ){return false;}}" /></td>
+            </tr>
+            <tr>
+              <th><span class="required">電話番号</span></th>
+              <td><input name="TextBoxPhoneNumber" type="text" maxlength="50" id="TextBoxPhoneNumber" tabindex="22" onkeydown="if(event.keyCode==13){if( window.event.srcElement.type==&#39;submit&#39; || window.event.srcElement.type==&#39;text&#39; ){return false;}}" onkeypress="if(event.keyCode==13){if( window.event.srcElement.type==&#39;submit&#39; || window.event.srcElement.type==&#39;text&#39; ){return false;}}" /></td>
+            </tr>
+            <tr>
+              <th><span class="required">E-mailアドレス</span></th>
+              <td><input name="TextBoxMailAddress" type="text" maxlength="50" id="TextBoxMailAddress" tabindex="23" onkeydown="if(event.keyCode==13){if( window.event.srcElement.type==&#39;submit&#39; || window.event.srcElement.type==&#39;text&#39; ){return false;}}" onkeypress="if(event.keyCode==13){if( window.event.srcElement.type==&#39;submit&#39; || window.event.srcElement.type==&#39;text&#39; ){return false;}}" /></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!--法人用テーブル-->
+        <table id="TableCompany" class="inquiryTable" hidden ="true" >
+          <tbody>
+            <tr>
+              <th><span class="required">会社名</span></th>
+              <td><input name="TextBoxCompanyName" type="text" maxlength="50" id="TextBoxCompanyName" tabindex="30" onkeydown="if(event.keyCode==13){if( window.event.srcElement.type==&#39;submit&#39; || window.event.srcElement.type==&#39;text&#39; ){return false;}}" onkeypress="if(event.keyCode==13){if( window.event.srcElement.type==&#39;submit&#39; || window.event.srcElement.type==&#39;text&#39; ){return false;}}" /></td>
+            </tr>
+            <tr>
+              <th><span class="required">ご担当者名</span></th>
+              <td><input name="TextBoxName_Company" type="text" maxlength="50" id="TextBoxName_Company" tabindex="31" onkeydown="if(event.keyCode==13){if( window.event.srcElement.type==&#39;submit&#39; || window.event.srcElement.type==&#39;text&#39; ){return false;}}" onkeypress="if(event.keyCode==13){if( window.event.srcElement.type==&#39;submit&#39; || window.event.srcElement.type==&#39;text&#39; ){return false;}}" /></td>
+            </tr>
+            <tr>
+              <th><span class="required">フリガナ</span></th>
+              <td><input name="TextBoxFurigana_Company" type="text" maxlength="50" id="TextBoxFurigana_Company" tabindex="32" onkeydown="if(event.keyCode==13){if( window.event.srcElement.type==&#39;submit&#39; || window.event.srcElement.type==&#39;text&#39; ){return false;}}" onkeypress="if(event.keyCode==13){if( window.event.srcElement.type==&#39;submit&#39; || window.event.srcElement.type==&#39;text&#39; ){return false;}}" /></td>
+            </tr>
+            <tr>
+              <th><span class="required">電話番号</span></th>
+              <td><input name="TextBoxPhoneNumber_Company" type="text" maxlength="50" id="TextBoxPhoneNumber_Company" tabindex="33" onkeydown="if(event.keyCode==13){if( window.event.srcElement.type==&#39;submit&#39; || window.event.srcElement.type==&#39;text&#39; ){return false;}}" onkeypress="if(event.keyCode==13){if( window.event.srcElement.type==&#39;submit&#39; || window.event.srcElement.type==&#39;text&#39; ){return false;}}" /></td>
+            </tr>
+            <tr>
+              <th><span class="required">E-mailアドレス</span></th>
+              <td><input name="TextBoxMailAddress_Company" type="text" maxlength="50" id="TextBoxMailAddress_Company" tabindex="34" onkeydown="if(event.keyCode==13){if( window.event.srcElement.type==&#39;submit&#39; || window.event.srcElement.type==&#39;text&#39; ){return false;}}" onkeypress="if(event.keyCode==13){if( window.event.srcElement.type==&#39;submit&#39; || window.event.srcElement.type==&#39;text&#39; ){return false;}}" /></td>
+            </tr>
+          </tbody>
+        </table>
+
+          <table id="TablePrivateValidator" ClientIDMode="Static">
+              
+              <tr>
+                  <td>
+                    <span id="RequiredFieldValidatorName" style="color:Red;display:none;">お名前を入力してください。</span>
+                  </td>                  
+              </tr>
+              
+              <tr>
+                  <td>
+                    <span id="RequiredFieldValidatorFurigana" style="color:Red;display:none;">フリガナを入力してください。</span>
+                  </td>                  
+              </tr>
+              <tr>
+                  <td>
+                    <span id="ExpressionValidatorFurigana" FocusOnError="True" style="color:Red;display:none;">カタカナで入力してください。</span>
+                  </td>                  
+              </tr>
+              
+              <tr>
+                  <td>
+                    <span id="RequiredFieldValidatorPhoneNumber" style="color:Red;display:none;">電話番号を入力してください。</span>
+                  </td>                  
+              </tr>
+              <tr>
+                  <td>
+                    <span id="ExpressionValidatorPhoneNumber" FocusOnError="True" style="color:Red;display:none;">電話番号に間違いがあります。</span>
+                  </td>                  
+              </tr>              
+              
+              <tr>
+                  <td> 
+                    <span id="RequiredFieldValidatorMailAddress" style="color:Red;display:none;">E-mailアドレスを入力してください。</span>
+                  </td>                  
+              </tr>
+              <tr>
+                  <td> 
+                    <span id="ExpressionValidatorMailAddress" FocusOnError="True" style="color:Red;display:none;">E-mailに間違いがあります。</span>
+                  </td>                  
+              </tr>
+          </table>
+
+
+          <table id="TableCompanyValidator" ClientIDMode="Static"  >
+              
+              <tr>
+                  <td>
+                    <span id="RequiredFieldValidatorCompanyName" style="color:Red;display:none;">会社名を入力してください。</span>
+                  </td>                  
+              </tr>
+              
+              <tr>
+                  <td>
+                    <span id="RequiredFieldValidatorName_Company" style="color:Red;display:none;">ご担当者名を入力してください。</span>
+                  </td>                  
+              </tr>
+              
+              <tr>
+                  <td>
+                    <span id="RequiredFieldValidatorFurigana_Company" style="color:Red;display:none;">フリガナを入力してください。</span>
+                  </td>                  
+              </tr>
+              <tr>
+                  <td>
+                  <span id="RegularExpressionValidatorFurigana_Company" FocusOnError="True" style="color:Red;display:none;">カタカナで入力してください。</span>
+                  </td>                  
+              </tr>
+              
+              <tr>
+                  <td>
+                    <span id="RequiredFieldValidatorPhoneNumber_Company" style="color:Red;display:none;">電話番号を入力してください。</span>
+                  </td>                  
+              </tr>
+              <tr>
+                  <td>
+                    <span id="ExpressionValidatorPhoneNumber_Company" FocusOnError="True" style="color:Red;display:none;">電話番号に間違いがあります。</span>
+                  </td>                  
+              </tr>
+              
+              <tr>
+                  <td>
+                    <span id="RequiredFieldValidatorMailAddress_Company" style="color:Red;display:none;">E-mailアドレスを入力してください。</span>
+                  </td>                  
+              </tr>
+              <tr>
+                  <td>
+						<span id="ExpressionValidatorMailAddress_Company" FocusOnError="True" style="color:Red;display:none;">E-mailに間違いがあります。</span>
+							  
+                  </td>                  
+              </tr>
+          </table>
+
+
+      </div>
+      
+      <div class="sectionBox">
+        <h2 class="headline02">ご質問内容<i class="icon iconReq"></i></h2>
+          <textarea name="TextBoxContents" rows="6" cols="20" id="TextBoxContents" tabindex="40" onkeydown="if(event.keyCode==13){if( window.event.srcElement.type==&#39;submit&#39; || window.event.srcElement.type==&#39;text&#39; ){return false;}}" onkeypress="if(event.keyCode==13){if( window.event.srcElement.type==&#39;submit&#39; || window.event.srcElement.type==&#39;text&#39; ){return false;}}">
+</textarea>
+          <span id="RequiredFieldValidatorTextBoxContents1" style="color:Red;visibility:hidden;">ご質問内容を入力してください。</span>
+          <span id="RequiredFieldValidatorTextBoxContents2" style="color:Red;visibility:hidden;">ご質問内容を入力してください。</span>
+      </div>
+
+      
+      <div class="noteBox">
+        <h3>― お問合せにあたっての注意事項</h3>
+        <p>日頃はコマツ教習所をご利用いただきまして誠にありがとうございます。<br>
+        このページをご利用いただいた場合、弊社はお客様が本ウェブサイトの「<a href="../cautions/cautions_on_use.html" target="_blank">ご利用上の注意</a>」に同意したものと見なします。 また弊社では、個人情報を適切に保護するため、合理的な安全管理措置を構築しております。詳しくは「<a href="../cautions/privacy.html" target="_blank">個人情報保護への取り組み</a>」をご覧ください。</p>
+      </div>
+      
+      <div class="submitBox">
+        <p>上記事項に同意いただける方は「入力内容を送信する」をクリックしてください。</p>
+        <ul><li class="submitBtn">
+            <span>
+                  <input type="submit" name="SendButton1" value="上記注意事項に同意の上、入力内容を送信する" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;SendButton1&quot;, &quot;&quot;, true, &quot;kojin&quot;, &quot;&quot;, false, false))" id="SendButton1" tabindex="80" RequiresConfirmation="true" ConfirmationMessage="送信します。\nよろしいですか？" style="background-color:transparent; border: none; outline: none;" />
+                  <input type="submit" name="SendButton2" value="上記注意事項に同意の上、入力内容を送信する" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;SendButton2&quot;, &quot;&quot;, true, &quot;hojin&quot;, &quot;&quot;, false, false))" id="SendButton2" tabindex="80" hidden="true" RequiresConfirmation="true" ConfirmationMessage="送信します。\nよろしいですか？" style="background-color:transparent; border: none; outline: none;" />
+            </span>
+            </li></ul>
+      </div>
+     
+    </div>
+</div>
+
+
+    
+    
+
+     
+
+<!-- ページトップ -->
+<p id="pageTop"><a href="#wrapper"><i class="fa fa-chevron-up"></i><br>トップへ<br>戻る</a></p>
+
+
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var Page_Validators =  new Array(document.getElementById("DropDownList1RangeValidator"), document.getElementById("DropDownList2RangeValidator"), document.getElementById("RequiredFieldValidatorName"), document.getElementById("RequiredFieldValidatorFurigana"), document.getElementById("ExpressionValidatorFurigana"), document.getElementById("RequiredFieldValidatorPhoneNumber"), document.getElementById("ExpressionValidatorPhoneNumber"), document.getElementById("RequiredFieldValidatorMailAddress"), document.getElementById("ExpressionValidatorMailAddress"), document.getElementById("RequiredFieldValidatorCompanyName"), document.getElementById("RequiredFieldValidatorName_Company"), document.getElementById("RequiredFieldValidatorFurigana_Company"), document.getElementById("RegularExpressionValidatorFurigana_Company"), document.getElementById("RequiredFieldValidatorPhoneNumber_Company"), document.getElementById("ExpressionValidatorPhoneNumber_Company"), document.getElementById("RequiredFieldValidatorMailAddress_Company"), document.getElementById("ExpressionValidatorMailAddress_Company"), document.getElementById("RequiredFieldValidatorTextBoxContents1"), document.getElementById("RequiredFieldValidatorTextBoxContents2"));
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+var DropDownList1RangeValidator = document.all ? document.all["DropDownList1RangeValidator"] : document.getElementById("DropDownList1RangeValidator");
+DropDownList1RangeValidator.controltovalidate = "DropDownListCenterAndHeadOffice";
+DropDownList1RangeValidator.focusOnError = "t";
+DropDownList1RangeValidator.errormessage = "お問合せ先センタを選択してください。";
+DropDownList1RangeValidator.validationGroup = "kojin";
+DropDownList1RangeValidator.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+DropDownList1RangeValidator.initialvalue = "0";
+var DropDownList2RangeValidator = document.all ? document.all["DropDownList2RangeValidator"] : document.getElementById("DropDownList2RangeValidator");
+DropDownList2RangeValidator.controltovalidate = "DropDownListCenterAndHeadOffice";
+DropDownList2RangeValidator.focusOnError = "t";
+DropDownList2RangeValidator.errormessage = "お問合せ先センタを選択してください。";
+DropDownList2RangeValidator.validationGroup = "hojin";
+DropDownList2RangeValidator.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+DropDownList2RangeValidator.initialvalue = "0";
+var RequiredFieldValidatorName = document.all ? document.all["RequiredFieldValidatorName"] : document.getElementById("RequiredFieldValidatorName");
+RequiredFieldValidatorName.controltovalidate = "TextBoxName";
+RequiredFieldValidatorName.focusOnError = "t";
+RequiredFieldValidatorName.errormessage = "お名前を入力してください。";
+RequiredFieldValidatorName.display = "Dynamic";
+RequiredFieldValidatorName.validationGroup = "kojin";
+RequiredFieldValidatorName.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+RequiredFieldValidatorName.initialvalue = "";
+var RequiredFieldValidatorFurigana = document.all ? document.all["RequiredFieldValidatorFurigana"] : document.getElementById("RequiredFieldValidatorFurigana");
+RequiredFieldValidatorFurigana.controltovalidate = "TextBoxFurigana";
+RequiredFieldValidatorFurigana.focusOnError = "t";
+RequiredFieldValidatorFurigana.errormessage = "フリガナを入力してください。";
+RequiredFieldValidatorFurigana.display = "Dynamic";
+RequiredFieldValidatorFurigana.validationGroup = "kojin";
+RequiredFieldValidatorFurigana.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+RequiredFieldValidatorFurigana.initialvalue = "";
+var ExpressionValidatorFurigana = document.all ? document.all["ExpressionValidatorFurigana"] : document.getElementById("ExpressionValidatorFurigana");
+ExpressionValidatorFurigana.controltovalidate = "TextBoxFurigana";
+ExpressionValidatorFurigana.errormessage = "カタカナで入力してください。";
+ExpressionValidatorFurigana.display = "Dynamic";
+ExpressionValidatorFurigana.validationGroup = "kojin";
+ExpressionValidatorFurigana.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+ExpressionValidatorFurigana.validationexpression = "^[ｧ-ﾞァ-ヶ 　]+$";
+var RequiredFieldValidatorPhoneNumber = document.all ? document.all["RequiredFieldValidatorPhoneNumber"] : document.getElementById("RequiredFieldValidatorPhoneNumber");
+RequiredFieldValidatorPhoneNumber.controltovalidate = "TextBoxPhoneNumber";
+RequiredFieldValidatorPhoneNumber.focusOnError = "t";
+RequiredFieldValidatorPhoneNumber.errormessage = "電話番号を入力してください。";
+RequiredFieldValidatorPhoneNumber.display = "Dynamic";
+RequiredFieldValidatorPhoneNumber.validationGroup = "kojin";
+RequiredFieldValidatorPhoneNumber.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+RequiredFieldValidatorPhoneNumber.initialvalue = "";
+var ExpressionValidatorPhoneNumber = document.all ? document.all["ExpressionValidatorPhoneNumber"] : document.getElementById("ExpressionValidatorPhoneNumber");
+ExpressionValidatorPhoneNumber.controltovalidate = "TextBoxPhoneNumber";
+ExpressionValidatorPhoneNumber.errormessage = "電話番号に間違いがあります。";
+ExpressionValidatorPhoneNumber.display = "Dynamic";
+ExpressionValidatorPhoneNumber.validationGroup = "kojin";
+ExpressionValidatorPhoneNumber.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+ExpressionValidatorPhoneNumber.validationexpression = "^\\d{3}-\\d{4}-\\d{4}$/|^0\\d{1,4}-\\d{1,4}-\\d{4}$|^0\\d{9}$|^0\\d{10}$";
+var RequiredFieldValidatorMailAddress = document.all ? document.all["RequiredFieldValidatorMailAddress"] : document.getElementById("RequiredFieldValidatorMailAddress");
+RequiredFieldValidatorMailAddress.controltovalidate = "TextBoxMailAddress";
+RequiredFieldValidatorMailAddress.focusOnError = "t";
+RequiredFieldValidatorMailAddress.errormessage = "E-mailアドレスを入力してください。";
+RequiredFieldValidatorMailAddress.display = "Dynamic";
+RequiredFieldValidatorMailAddress.validationGroup = "kojin";
+RequiredFieldValidatorMailAddress.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+RequiredFieldValidatorMailAddress.initialvalue = "";
+var ExpressionValidatorMailAddress = document.all ? document.all["ExpressionValidatorMailAddress"] : document.getElementById("ExpressionValidatorMailAddress");
+ExpressionValidatorMailAddress.controltovalidate = "TextBoxMailAddress";
+ExpressionValidatorMailAddress.errormessage = "E-mailに間違いがあります。";
+ExpressionValidatorMailAddress.display = "Dynamic";
+ExpressionValidatorMailAddress.validationGroup = "kojin";
+ExpressionValidatorMailAddress.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+ExpressionValidatorMailAddress.validationexpression = "^([0-9a-zA-Z]([-.\\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\\w]*[0-9a-zA-Z]\\.)+[a-zA-Z]{2,9})$";
+var RequiredFieldValidatorCompanyName = document.all ? document.all["RequiredFieldValidatorCompanyName"] : document.getElementById("RequiredFieldValidatorCompanyName");
+RequiredFieldValidatorCompanyName.controltovalidate = "TextBoxCompanyName";
+RequiredFieldValidatorCompanyName.focusOnError = "t";
+RequiredFieldValidatorCompanyName.errormessage = "会社名を入力してください。";
+RequiredFieldValidatorCompanyName.display = "Dynamic";
+RequiredFieldValidatorCompanyName.validationGroup = "hojin";
+RequiredFieldValidatorCompanyName.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+RequiredFieldValidatorCompanyName.initialvalue = "";
+var RequiredFieldValidatorName_Company = document.all ? document.all["RequiredFieldValidatorName_Company"] : document.getElementById("RequiredFieldValidatorName_Company");
+RequiredFieldValidatorName_Company.controltovalidate = "TextBoxName_Company";
+RequiredFieldValidatorName_Company.focusOnError = "t";
+RequiredFieldValidatorName_Company.errormessage = "ご担当者名を入力してください。";
+RequiredFieldValidatorName_Company.display = "Dynamic";
+RequiredFieldValidatorName_Company.validationGroup = "hojin";
+RequiredFieldValidatorName_Company.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+RequiredFieldValidatorName_Company.initialvalue = "";
+var RequiredFieldValidatorFurigana_Company = document.all ? document.all["RequiredFieldValidatorFurigana_Company"] : document.getElementById("RequiredFieldValidatorFurigana_Company");
+RequiredFieldValidatorFurigana_Company.controltovalidate = "TextBoxFurigana_Company";
+RequiredFieldValidatorFurigana_Company.focusOnError = "t";
+RequiredFieldValidatorFurigana_Company.errormessage = "フリガナを入力してください。";
+RequiredFieldValidatorFurigana_Company.display = "Dynamic";
+RequiredFieldValidatorFurigana_Company.validationGroup = "hojin";
+RequiredFieldValidatorFurigana_Company.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+RequiredFieldValidatorFurigana_Company.initialvalue = "";
+var RegularExpressionValidatorFurigana_Company = document.all ? document.all["RegularExpressionValidatorFurigana_Company"] : document.getElementById("RegularExpressionValidatorFurigana_Company");
+RegularExpressionValidatorFurigana_Company.controltovalidate = "TextBoxFurigana_Company";
+RegularExpressionValidatorFurigana_Company.errormessage = "カタカナで入力してください。";
+RegularExpressionValidatorFurigana_Company.display = "Dynamic";
+RegularExpressionValidatorFurigana_Company.validationGroup = "hojin";
+RegularExpressionValidatorFurigana_Company.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+RegularExpressionValidatorFurigana_Company.validationexpression = "^[ｧ-ﾞァ-ヶ 　]+$";
+var RequiredFieldValidatorPhoneNumber_Company = document.all ? document.all["RequiredFieldValidatorPhoneNumber_Company"] : document.getElementById("RequiredFieldValidatorPhoneNumber_Company");
+RequiredFieldValidatorPhoneNumber_Company.controltovalidate = "TextBoxPhoneNumber_Company";
+RequiredFieldValidatorPhoneNumber_Company.focusOnError = "t";
+RequiredFieldValidatorPhoneNumber_Company.errormessage = "電話番号を入力してください。";
+RequiredFieldValidatorPhoneNumber_Company.display = "Dynamic";
+RequiredFieldValidatorPhoneNumber_Company.validationGroup = "hojin";
+RequiredFieldValidatorPhoneNumber_Company.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+RequiredFieldValidatorPhoneNumber_Company.initialvalue = "";
+var ExpressionValidatorPhoneNumber_Company = document.all ? document.all["ExpressionValidatorPhoneNumber_Company"] : document.getElementById("ExpressionValidatorPhoneNumber_Company");
+ExpressionValidatorPhoneNumber_Company.controltovalidate = "TextBoxPhoneNumber_Company";
+ExpressionValidatorPhoneNumber_Company.errormessage = "電話番号に間違いがあります。";
+ExpressionValidatorPhoneNumber_Company.display = "Dynamic";
+ExpressionValidatorPhoneNumber_Company.validationGroup = "hojin";
+ExpressionValidatorPhoneNumber_Company.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+ExpressionValidatorPhoneNumber_Company.validationexpression = "^\\d{3}-\\d{4}-\\d{4}$/|^0\\d{1,4}-\\d{1,4}-\\d{4}$|^0\\d{9}$|^0\\d{10}$";
+var RequiredFieldValidatorMailAddress_Company = document.all ? document.all["RequiredFieldValidatorMailAddress_Company"] : document.getElementById("RequiredFieldValidatorMailAddress_Company");
+RequiredFieldValidatorMailAddress_Company.controltovalidate = "TextBoxMailAddress_Company";
+RequiredFieldValidatorMailAddress_Company.focusOnError = "t";
+RequiredFieldValidatorMailAddress_Company.errormessage = "E-mailアドレスを入力してください。";
+RequiredFieldValidatorMailAddress_Company.display = "Dynamic";
+RequiredFieldValidatorMailAddress_Company.validationGroup = "hojin";
+RequiredFieldValidatorMailAddress_Company.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+RequiredFieldValidatorMailAddress_Company.initialvalue = "";
+var ExpressionValidatorMailAddress_Company = document.all ? document.all["ExpressionValidatorMailAddress_Company"] : document.getElementById("ExpressionValidatorMailAddress_Company");
+ExpressionValidatorMailAddress_Company.controltovalidate = "TextBoxMailAddress_Company";
+ExpressionValidatorMailAddress_Company.errormessage = "E-mailに間違いがあります。";
+ExpressionValidatorMailAddress_Company.display = "Dynamic";
+ExpressionValidatorMailAddress_Company.validationGroup = "hojin";
+ExpressionValidatorMailAddress_Company.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+ExpressionValidatorMailAddress_Company.validationexpression = "^([0-9a-zA-Z]([-.\\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\\w]*[0-9a-zA-Z]\\.)+[a-zA-Z]{2,9})$";
+var RequiredFieldValidatorTextBoxContents1 = document.all ? document.all["RequiredFieldValidatorTextBoxContents1"] : document.getElementById("RequiredFieldValidatorTextBoxContents1");
+RequiredFieldValidatorTextBoxContents1.controltovalidate = "TextBoxContents";
+RequiredFieldValidatorTextBoxContents1.focusOnError = "t";
+RequiredFieldValidatorTextBoxContents1.errormessage = "ご質問内容を入力してください。";
+RequiredFieldValidatorTextBoxContents1.validationGroup = "kojin";
+RequiredFieldValidatorTextBoxContents1.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+RequiredFieldValidatorTextBoxContents1.initialvalue = "";
+var RequiredFieldValidatorTextBoxContents2 = document.all ? document.all["RequiredFieldValidatorTextBoxContents2"] : document.getElementById("RequiredFieldValidatorTextBoxContents2");
+RequiredFieldValidatorTextBoxContents2.controltovalidate = "TextBoxContents";
+RequiredFieldValidatorTextBoxContents2.focusOnError = "t";
+RequiredFieldValidatorTextBoxContents2.errormessage = "ご質問内容を入力してください。";
+RequiredFieldValidatorTextBoxContents2.validationGroup = "hojin";
+RequiredFieldValidatorTextBoxContents2.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+RequiredFieldValidatorTextBoxContents2.initialvalue = "";
+//]]>
+</script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        //]]>
+</script>
+</form>
+
+<!-- フッタ -->
+<footer>
+  <div id="footerMenuArea">
+    <div class="container">
+      <div class="row">
+        <div class="wrap">
+            <div class="col-md-3 col-sm-3 hidden-xs">
+              <div class="listBox">
+                  <p>講習予約</p>
+                  <ul>
+                    <li><a href="../illust_search/index.html">イラストから探す</a></li>
+                    <li><a href="../KkjReservation/Subjects/SubjectList.html">講習名から探す</a></li>
+                  </ul>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-4 hidden-xs">
+              <div class="listBox">
+                  <p>センタ一覧</p>
+                  <ul class="centerList">
+                    <li><a href="../hokkaido/index.html">北海道センタ</a></li>
+                    <li><a href="../miyagi/index.html">宮城センタ</a></li>
+                    <li><a href="../tochigi/index.html">栃木センタ</a></li>
+                    <li><a href="../gunma/index.html">群馬センタ</a></li>
+                    <li><a href="../saitama/index.html">埼玉センタ</a></li>
+                    <li><a href="../tokyo/index.html">東京センタ</a></li>
+                    <li><a href="../kanagawa/index.html">神奈川センタ</a></li>
+                    <li><a href="../sizuoka/index.html">静岡センタ</a></li>
+                    <li><a href="../awadu/index.html">粟津センタ</a></li>
+                    <li><a href="../aichi/index.html">愛知センタ</a></li>
+                    <li><a href="../kyoto/index.html">京都センタ</a></li>
+                    <li><a href="../kinki/index.html">近畿センタ</a></li>
+                    <li><a href="../nara/index.html">奈良センタ</a></li>
+                    <li><a href="../sikoku/index.html">四国センタ</a></li>
+                    <li><a href="../kouchi/index.html">高知支所</a></li>
+                    <li><a href="../kyushu/index.html">九州センタ</a></li>
+                  </ul>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-3 hidden-xs">
+              <div class="listBox">
+                  <p>サポート情報</p>
+                  <ul>
+                    <li><a href="../faq/FaqTop.html">よくあるお問合せ</a></li>
+                    <li><a href="../info/replacement.html">再交付・書替について</a></li>
+                    <li><a href="../info/conveniprint.html">コンビニプリントについて</a></li>
+                    <li>助成金・給付金について
+                        <ul class="normalList">
+                          <li><a href="../info/construction_education_grant_change.html">助成金制度一部改正のお知らせ</a></li>
+                          <li><a href="../info/construction_education_grant.html">人材開発支援助成金</a></li>
+                          <li><a href="../info/education_training_payment.html">教育訓練給付制度</a></li>
+                        </ul>
+                    </li>
+                  </ul>
+              </div>
+            </div>
+            <div class="col-md-2 col-sm-2 hidden-xs">
+              <div class="listBox">
+                  <p>&nbsp;</p>
+                  <ul>
+                    <li><a href="../company/outline.html">会社概要</a></li>
+                    <!--<li><a href="#">ログイン</a></li>
+                    <li><a href="#">新規会員登録</a></li>-->
+                    <li><a href="requestCatalog.html">資料請求</a></li>
+                    <li><a href="inquiry.html">お問合せ</a></li>
+                  </ul>
+              </div>
+            </div>
+            </div>
+      </div>
+    </div>
+    <div class="footerLink">
+      <ul>
+        <li><a href="../cautions/cautions_on_use.html">ご利用上の注意</a></li>
+        <li><a href="../cautions/privacy.html">個人情報保護への取り組み</a></li>
+        <li><a href="../cautions/mynumber.html">特定個人情報等の適正な取扱いに関する基本方針</a></li>
+      </ul>
+    </div>
+  </div>
+  <div id="footerCopyArea">
+    <p>Copyright © Komatsu Safety Training Center Ltd. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- jQuery ( Bootstrap の JavaScript プラグインに必要です ) --> 
+<script src="../common/js/jquery-3.2.1.min.js"></script> 
+<!-- (下に)全てのコンパイル済みプラグインをインクルードするか、必要に応じて個別にファイルをインクルードします --> 
+<script src="../common/js/bootstrap.js"></script>
+<script src="../common/js/functions.js"></script>
+<script src="../common/js/bootsnav.js"></script>
+<script src="../common/js/slick.min.js"></script>
+<script src="../common/js/jquery.matchHeight.js"></script>
+<script src="../common/js/jquery.magnific-popup.min.js"></script>
+<script src="../common/js/sticky-state.min.js"></script>
+<script>
+$(function() {
+    $('.single-item').slick({
+          infinite: true,
+		  lazyLoad: 'progressive',
+          dots:true,
+          slidesToShow: 1,
+          /*centerMode: true, //要素を中央寄せ
+          centerPadding:'100px', //両サイドの見えている部分のサイズ*/
+          autoplay:true, //自動再生
+          autoplaySpeed:5000,
+          responsive: [{
+               breakpoint: 1600,
+                    settings: {
+                         centerMode: false,
+               }
+		  },{
+			   breakpoint: 480,
+                    settings: {
+                         centerMode: false,
+						 dots:false
+               }
+          }]
+     });
+});
+$(function(){
+$('.aboutPhotoList').slick({
+autoplay:true,
+autoplaySpeed:5000,
+dots:true,
+pauseOnHover:true,
+slidesToShow:4,
+slidesToScroll:1,
+arrows: false,
+responsive: [{
+      breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        }
+      }
+    ]
+});
+});
+</script>
+<script>
+$(function(){
+  var state = false;
+  var scrollpos;
+ 
+  $('.navbar-toggle').on('click', function(){
+    if(state == false) {
+      scrollpos = $(window).scrollTop();
+      $('body').addClass('fixed').css({'top': -scrollpos});
+      $('.navbar').addClass('open');
+      state = true;
+    } else {
+      $('body').removeClass('fixed').css({'top': 0});
+      window.scrollTo( 0 , scrollpos );
+      $('.navbar').removeClass('open');
+      state = false;
+    }
+  });
+ 
+});
+</script>
+<script>
+$(function(){
+        var slider = $('.aboutPhotoList02').slick({
+		autoplay:true,
+		autoplaySpeed:5000,
+		dots:false,
+		fade: true,
+		pauseOnHover:true,
+		arrows: true,
+		});
+    });
+</script>
+<script type="text/javascript">
+$('.heightBox').matchHeight();
+$('.scheduleClassNameList li').matchHeight();
+$('#topBannerArea a').matchHeight();
+</script>
+<script type="text/javascript">
+$(function (){
+    $('.popup-youtube').magnificPopup({
+        type: 'iframe',
+        mainClass: 'mfp-fade',
+        removalDelay: 150,
+        preloader: false
+    });
+});
+$(function () {
+  $('.youtubePopup').magnificPopup({
+  type: 'inline',
+  showCloseBtn:true,
+  removalDelay: 500, //delay removal by X to allow out-animation
+  callbacks: {
+    beforeOpen: function() {
+       this.st.mainClass = this.st.el.attr('data-effect');
+    }
+  },
+  midClick: true
+  });
+});
+$(function(){
+      $('.aboutPhotoPopup').magnificPopup({
+      type: 'image'
+  });
+});
+$(function () {
+  $('.pricePopup').magnificPopup({
+  showCloseBtn:false,
+  removalDelay: 500, //delay removal by X to allow out-animation
+  callbacks: {
+    beforeOpen: function() {
+       this.st.mainClass = this.st.el.attr('data-effect');
+    }
+  },
+  fixedContentPos: false,
+  midClick: true
+  });
+  //閉じるリンクの設定
+  $(document).on('click', '.popup-modal-dismiss', function (e) { 
+    e.preventDefault();
+    $.magnificPopup.close();
+  });
+});
+$(function () {
+  $('.illustSearchPopup').magnificPopup({
+  showCloseBtn:false,
+  removalDelay: 500, //delay removal by X to allow out-animation
+  callbacks: {
+    beforeOpen: function() {
+       this.st.mainClass = this.st.el.attr('data-effect');
+    }
+  },
+  midClick: true
+  });
+  //閉じるリンクの設定
+  $(document).on('click', '.popup-modal-dismiss', function (e) { 
+    e.preventDefault();
+    $.magnificPopup.close();
+  });
+});
+
+//交通案内用(使用時にオープン)
+/*$(function () {
+	$('.aboutGuidePhoto01').magnificPopup({
+		delegate: 'a', // ポップアップを開く子要素
+		type: 'image',
+		callbacks: {
+			open: setInterval(function() {
+			$.magnificPopup.instance.next()
+			}, 5000)
+		},
+		
+	});
+});*/
+</script>
+<script>
+var headerHight = $("nav.navbar.bootsnav").outerHeight();
+$('a[href^="#anc"],area[href^="#anc"]').click(function() {
+    var href = $(this).attr("href");
+    var target = $(href == "#" || href == "" ? "body" : href);
+    var position = target.offset().top - headerHight;
+    $("html, body").animate({ scrollTop: position }, 500, "swing");
+    return false;
+});
+</script>
+<script type="text/javascript">
+//ページ内リンク調整
+$(window).on('load', function() {
+  var headerHeight = 125;
+  var url = $(location).attr('href');
+  if(url.indexOf("?id=") != -1){
+    var id = url.split("?id=");
+    var $target = $('#' + id[id.length - 1]);
+    if($target.length){
+      var pos = $target.offset().top-headerHeight;
+      $("html, body").animate({scrollTop:pos}, 400);
+    }
+  }else if(url.indexOf("?ac=") != -1){
+    var ac = url.split("?ac=");
+    var $target = $("a[name='" + ac[ac.length - 1] + "']");
+    if($target.length){
+      var pos = $target.offset().top-headerHeight;
+      $("html, body").animate({scrollTop:pos}, 400);
+    }
+  }
+  });
+</script>
+<script>
+//■page topボタン
+$(function(){
+var topBtn=$('#pageTop');
+topBtn.hide();
+ 
+//◇ボタンの表示設定
+$(window).scroll(function(){
+  if($(this).scrollTop()>80){
+    //---- 画面を80pxスクロールしたら、ボタンを表示する
+    topBtn.fadeIn();
+  }else{
+    //---- 画面が80pxより上なら、ボタンを表示しない
+    topBtn.fadeOut();
+  } 
+});
+ 
+// ◇ボタンをクリックしたら、スクロールして上に戻る
+topBtn.click(function(){
+  $('body,html').animate({
+  scrollTop: 0},500);
+  return false;
+});
+
+});
+</script>
+<script src="../common/js/imageMapResizer.min.js"></script> 
+<script>
+$(document).ready(function() {
+    $('map').imageMapResize();
+});
+</script>
+
+<script src="../common/js/wow.min.js"></script>
+<script type="text/javascript">
+if(!_ua.ltIE8){
+new WOW().init();
+}
+</script>
+
+</body>
+
+<!-- Mirrored from www.komatsu-kyoshujo.co.jp/inquiry/inquiry.aspx by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 27 Dec 2018 17:49:08 GMT -->
+</html>
